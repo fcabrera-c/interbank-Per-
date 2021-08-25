@@ -7,6 +7,7 @@ Given(/^I'm at home page$/, function() {
 });
 Given(/^I select the searching option$/, function() {
   $("body > header > div > div.lh-gh__search.lq-gh__search > div.lh-gh__search__lens").click();
+  $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
