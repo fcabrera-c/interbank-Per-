@@ -3,9 +3,11 @@ Given(/^I'm at home page$/, function() {
   browser.configure().window().maximize();
   var timeUnits = require("minium/timeunits");
   $(":root").waitTime(5, timeUnits.SECONDS);
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
 Given(/^I select the searching option$/, function() {
   $("body > header > div > div.lh-gh__search.lq-gh__search > div.lh-gh__search__lens").click();
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
@@ -26,6 +28,7 @@ When(/^I search something$/, function() {
   $("#lq-autocomplete").sendKeys("a");
   $(":root").waitTime(1, timeUnits.SECONDS);
   $("#lq-autocomplete").sendKeys("s");
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(2, timeUnits.SECONDS);
 });
 
