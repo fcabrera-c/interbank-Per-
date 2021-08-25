@@ -14,7 +14,6 @@ Given(/^we validate all sections of the page$/, function() {
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(3, timeUnits.SECONDS);
   $("#p_p_id_56_INSTANCE_apC6xMhAPCrE_ > div > div > div.journal-content-article").scrollIntoView();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
