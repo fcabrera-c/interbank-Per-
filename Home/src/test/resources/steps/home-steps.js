@@ -19,4 +19,5 @@ Given(/^we validate all sections of the page$/, function() {
 
 Then(/^we validate the Footer section$/, function() {
   $("body > div.lq-body-wrapper > footer > div.lh-footer-top").scrollIntoView();
+  $(":root").waitTime(2, timeUnits.SECONDS);
 });
