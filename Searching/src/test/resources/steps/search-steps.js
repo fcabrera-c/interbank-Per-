@@ -40,5 +40,5 @@ Then(/^I see the results$/, function() {
   $("#p_p_id_motorbusqueda_WAR_motorbusquedaportlet_INSTANCE_Motor7JE3_ > div > div > div > div.quick-search > div:nth-child(5) > ul > li.link.pos-9 > div > a").click();
   $(":root").waitTime(2, timeUnits.SECONDS);
   $("#containerFiltroCategoria > div > div > div").scrollIntoView();
- 
+  $(":root").waitTime(2, timeUnits.SECONDS);
 });  
